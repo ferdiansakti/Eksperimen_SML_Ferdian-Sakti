@@ -1,5 +1,8 @@
 name: Auto Preprocessing on Dataset Change
 
+permissions:
+  contents: write
+
 on:
   push:
     branches: [ main ]
@@ -39,4 +42,5 @@ jobs:
           git config --global user.email "actions@github.com"
           git add preprocessing/loan_preprocessing.csv
           git commit -m "auto: update preprocessing data" || echo "No changes"
+          git pull origin main --rebase
           git push
