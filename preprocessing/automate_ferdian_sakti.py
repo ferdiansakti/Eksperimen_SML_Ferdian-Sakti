@@ -93,8 +93,8 @@ def save_data(df, path):
     df.to_csv(path, index=False)
 
 if __name__ == "__main__":
-    input_path = "dataset_raw/loan.csv"
-    output_path = "preprocessing/loan_clean.csv"
+    input_path = "dataset_raw/loandataset.csv"
+    output_path = "preprocessing/loan_preprocessing.csv"
 
     df = load_data(input_path)
     df_clean = preprocess(df)
