@@ -11,28 +11,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: 🐍 Setup Python
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: 📦 Install dependencies
+      - name: Install dependencies
         run: |
           pip install pandas numpy scikit-learn scipy
 
-      - name: 🚀 Run automate.py
+      - name: Run automate.py
         run: |
           python automate.py
 
-      - name: 📤 Upload hasil preprocessing
+      - name: Upload preprocessing result
         uses: actions/upload-artifact@v3
         with:
           name: preprocessing-result
-<<<<<<< HEAD
           path: preprocessing/loan_preprocessing.csv
-=======
-          path: preprocessing/loan_preprocessing.csv
->>>>>>> 26b2455 (fix: save remaining changes)
