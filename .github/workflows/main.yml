@@ -31,4 +31,8 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: preprocessing-result
+<<<<<<< HEAD
           path: preprocessing/loan_preprocessing.csv
+=======
+          path: preprocessing/loan_preprocessing.csv
+>>>>>>> 26b2455 (fix: save remaining changes)
