@@ -23,9 +23,9 @@ jobs:
         run: |
           pip install pandas numpy scikit-learn scipy
 
-      - name: Run automate.py
+      - name: Run automate script
         run: |
-          python automate.py
+          python preprocessing/automate_Ferdian.py
 
       - name: Upload preprocessing result
         uses: actions/upload-artifact@v4
